@@ -1,0 +1,41 @@
+body {
+  display: grid;
+  height: 100vh;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  grid-template-rows: 1fr 8.5fr 0.5fr;
+}
+
+header {
+  background-color: black;
+}
+
+footer {
+  background-color: black;
+}
+
+h1 {
+  font-size: 2em;
+  font-family: 'DotGothic16', sans-serif;
+  margin: 1em;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.5em;
+}
+
+
+.main {
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr auto;
+  width: 80vw;
+}
+
+.wrapper {
+  display: grid;
+  height: 50vh;
+  align-items: center;
+  background-color: aquamarine;
+}
