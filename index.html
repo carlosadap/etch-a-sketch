@@ -5,31 +5,54 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Etch-A-Sketch</title>
-  <script src="./app.js"></script>
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
-
+  
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
-
+  
 </head>
 <body>
   <header>
-
+    
   </header>
-
+  
   <div class="main">
     <h2>Project:</h2>
     <h1>Etch-A-Sketch</h1>
-    <h4>Options:</h4>
+    <div class="options">
+      <h4 id="options">Options:</h4>
+      <label for="size">Choose grid size: </label>
+      <input type="range" name="size" id="grid-size" min="4" max="32" step="1" value="16">
+      <output class="size-output" for="size"></output>
+    </div>
+
     <h3>The grid:</h3>
     <div class="wrapper">
+      <div>a</div>
+      <div></div>
+      <div>b</div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div>a</div>
+      <div>c</div>
     </div>
   </div>
-
+  
   <footer>
-
+    
   </footer>
-
+  
+  <script src="./app.js"></script>
 </body>
 </html>

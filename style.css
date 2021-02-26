@@ -16,22 +16,30 @@ footer {
 }
 
 h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 2em;
   font-family: 'DotGothic16', sans-serif;
 }
 
 h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.5em;
-  margin: 0.5em;
 }
 
 h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1em;
 }
 
 .main {
   display: grid;
-  grid-template-rows: 1fr 2fr 1fr auto;
+  grid-template-rows: 1fr 2fr 1fr 1fr auto;
   width: 80vw;
 }
 
