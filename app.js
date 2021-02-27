@@ -5,12 +5,14 @@ const wrapper = document.querySelector('.wrapper');
 output.textContent = size.value;
 createGrid(size.value);
 
-size.addEventListener('input', function () {
+size.addEventListener('input', reset);
+
+function reset() {
   output.textContent = size.value;
   wrapper.style.gridTemplateRows = `repeat(${size.value}, 1fr)`;
   wrapper.style.gridTemplateColumns = `repeat(${size.value}, 1fr)`;
   createGrid(size.value);
-});
+}
 
 function createGrid(n) {
   let idx = 0;
@@ -34,3 +36,6 @@ function changeColor() {
   const color = document.querySelector('#cell-color').value;
   this.style.backgroundColor = color;
 }
+
+const btnReset = document.querySelector('.btn-reset');
+btnReset.addEventListener('click', reset);
