@@ -20,10 +20,7 @@ footer {
 }
 
 h1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2em;
+  font-size: 3em;
   font-family: 'DotGothic16', sans-serif;
 }
 
@@ -34,29 +31,35 @@ h2 {
   font-size: 1.5em;
 }
 
-h3 {
+label {
+  margin: 2em;
+}
+
+.project-name {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1em;
 }
 
 .options {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
 }
 
 .main {
   display: grid;
-  grid-template-rows: 2fr 1fr 1fr auto;
-  width: 80vw;
+  grid-template-rows: 2fr 1fr auto 1fr ;
+  width: 100vw;
+  justify-items: center;
 }
 
 .wrapper {
   display: grid;
   grid-template-rows: repeat(16, 1fr);
   grid-template-columns: repeat(16, 1fr);
-  width: auto;
+  width: 93%;
   height: 50vh;
   border: solid 0.5em gray;
   grid-auto-flow: column;
@@ -66,4 +69,22 @@ h3 {
 .cell {
   border: solid 0.1em rgba(150, 141, 141, 0.884);
   margin: 0;
+}
+
+@media (min-width: 768px)  {
+  .wrapper {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1024px)  {
+  .wrapper {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1440px)  {
+  .wrapper {
+    width: 60%;
+  }
 }
