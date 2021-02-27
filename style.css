@@ -47,8 +47,14 @@ h3 {
   display: grid;
   grid-template-rows: repeat(16, 1fr);
   grid-template-columns: repeat(16, 1fr);
-  width: 80vw;
+  width: auto;
   height: 50vh;
+  border: solid 0.5em gray;
   grid-auto-flow: column;
   background-color: aquamarine;
+}
+
+.cell {
+  border: solid 0.1em rgba(150, 141, 141, 0.884);
+  margin: 0;
 }
