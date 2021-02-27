@@ -2,6 +2,14 @@ const size = document.querySelector('#grid-size');
 const output = document.querySelector('.size-output');
 const wrapper = document.querySelector('.wrapper');
 
+let mouseDown = false;
+document.onmousedown = function () {
+  mouseDown = true;
+}
+document.onmouseup = function () {
+  mouseDown = false;
+}
+
 output.textContent = size.value;
 createGrid(size.value);
 
@@ -33,8 +41,10 @@ function addCellListener() {
 }
 
 function changeColor() {
-  const color = document.querySelector('#cell-color').value;
-  this.style.backgroundColor = color;
+  if (mouseDown) {
+    const color = document.querySelector('#cell-color').value;
+    this.style.backgroundColor = color;
+  }
 }
 
 const btnReset = document.querySelector('.btn-reset');
