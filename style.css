@@ -12,7 +12,11 @@ header {
 }
 
 footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: black;
+  color: antiquewhite;
 }
 
 h1 {
@@ -37,9 +41,14 @@ h3 {
   font-size: 1em;
 }
 
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .main {
   display: grid;
-  grid-template-rows: 1fr 2fr 1fr 1fr auto;
+  grid-template-rows: 2fr 1fr 1fr auto;
   width: 80vw;
 }
 
@@ -51,7 +60,7 @@ h3 {
   height: 50vh;
   border: solid 0.5em gray;
   grid-auto-flow: column;
-  background-color: aquamarine;
+  background-color: rgb(201, 201, 201);
 }
 
 .cell {

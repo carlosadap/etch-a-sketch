@@ -31,6 +31,6 @@ function addCellListener() {
 }
 
 function changeColor() {
-  const color = "black";
+  const color = document.querySelector('#cell-color').value;
   this.style.backgroundColor = color;
 }

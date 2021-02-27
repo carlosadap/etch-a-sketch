@@ -18,14 +18,19 @@
   </header>
   
   <div class="main">
-    <h2>Project:</h2>
+    <!-- <h2>Project:</h2> -->
     <h1>Etch-A-Sketch</h1>
     <div class="options">
-      <h4 id="options">Options:</h4>
-      <label for="size">Choose grid size: </label>
-      <input type="range" name="size" id="grid-size" min="4" max="32" step="1" value="16">
-      <output class="size-output" for="size"></output>
-
+      <div>
+        <h4 id="options">Options:</h4>
+      </div>
+      <div>
+        <label for="size">Choose grid size: </label>
+        <input type="range" name="size" id="grid-size" min="4" max="32" step="1" value="16">
+        <output class="size-output" for="size"></output>
+        <label for="cell-color">Cell Color</label>
+        <input type="color" id="cell-color" name="cell-color" value="#000000">
+      </div>
     </div>
 
     <h3>The grid:</h3>
