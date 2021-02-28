@@ -2,13 +2,18 @@ const size = document.querySelector('#grid-size');
 const output = document.querySelector('.size-output');
 const wrapper = document.querySelector('.wrapper');
 
+
+document.addEventListener("DOMContentLoaded", startup);
+
 let mouseDown = false;
-document.onmousedown = function () {
-  mouseDown = true;
+
+function startup() {
+  document.addEventListener("mousedown", () => mouseDown = true)
+  document.addEventListener("mouseup", () => mouseDown = false)
+  document.addEventListener("mousedown", () => mouseDown = true)
+  document.addEventListener("mouseup", () => mouseDown = false)
 }
-document.onmouseup = function () {
-  mouseDown = false;
-}
+
 
 output.textContent = size.value;
 createGrid(size.value);
