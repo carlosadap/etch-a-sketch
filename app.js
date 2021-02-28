@@ -10,8 +10,8 @@ let mouseDown = false;
 function startup() {
   document.addEventListener("mousedown", () => mouseDown = true)
   document.addEventListener("mouseup", () => mouseDown = false)
-  document.addEventListener("mousedown", () => mouseDown = true)
-  document.addEventListener("mouseup", () => mouseDown = false)
+  document.addEventListener("touchstart", () => mouseDown = true)
+  document.addEventListener("touchend", () => mouseDown = false)
 }
 
 
