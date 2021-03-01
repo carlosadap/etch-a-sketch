@@ -10,10 +10,15 @@ let mouseDown = false;
 function startup() {
   document.addEventListener("mousedown", () => mouseDown = true)
   document.addEventListener("mouseup", () => mouseDown = false)
-  document.addEventListener("touchstart", () => mouseDown = true)
-  document.addEventListener("touchend", () => mouseDown = false)
+  document.addEventListener("touchstart", (e) => {
+    e.preventDefault();
+    mouseDown = true
+  })
+  document.addEventListener("touchend", (e) => {
+    e.preventDefault();
+    mouseDown = false
+  })
 }
-
 
 output.textContent = size.value;
 createGrid(size.value);
