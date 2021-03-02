@@ -48,6 +48,10 @@ function createGrid(n) {
 function addCellListener() {
   const cells = document.querySelectorAll('.cell')
   cells.forEach(cell => cell.addEventListener('mouseover', changeColor))
+  cells.forEach(cell => cell.addEventListener('touchmove', e => {
+    e.preventDefault();
+    changeColor;
+  }))
 }
 
 function changeColor() {
