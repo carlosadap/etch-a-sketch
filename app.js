@@ -49,9 +49,15 @@ function addCellListener() {
   const cells = document.querySelectorAll('.cell')
   cells.forEach(cell => cell.addEventListener('mouseover', changeColor))
   cells.forEach(cell => cell.addEventListener('touchmove', e => {
-    e.preventDefault();
-    changeColor;
+    getTouchMouseTargetElement(e).changeColor();
   }))
+}
+
+function getTouchMouseTargetElement(e) {
+  if (e.touches) {
+    return document.elementFromPoint(e.touches[0].pageX, e.touches[0].pageY);
+  }
+  return e.target;
 }
 
 function changeColor() {
