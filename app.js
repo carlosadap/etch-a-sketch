@@ -10,14 +10,8 @@ let mouseDown = false;
 function startup() {
   document.addEventListener("mousedown", () => mouseDown = true)
   document.addEventListener("mouseup", () => mouseDown = false)
-  document.addEventListener("touchstart", (e) => {
-    e.preventDefault();
-    mouseDown = true
-  })
-  document.addEventListener("touchend", (e) => {
-    e.preventDefault();
-    mouseDown = false
-  })
+  document.addEventListener("touchstart", () => mouseDown = true)
+  document.addEventListener("touchend", () => mouseDown = false)
 }
 
 output.textContent = size.value;
@@ -47,9 +41,10 @@ function createGrid(n) {
 
 function addCellListener() {
   const cells = document.querySelectorAll('.cell')
-  cells.forEach(cell => cell.addEventListener('mouseover', changeColor))
+  cells.forEach(cell => cell.addEventListener('mouseover', changeColor));
   cells.forEach(cell => cell.addEventListener('touchmove', e => {
-    getTouchMouseTargetElement(e).changeColor();
+    e.preventDefault();
+    const color = document.querySelector('#cell-color').value; getTouchMouseTargetElement(e).style.backgroundColor = color;
   }))
 }
 
